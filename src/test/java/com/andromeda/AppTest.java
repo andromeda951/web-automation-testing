@@ -1,20 +1,28 @@
 package com.andromeda;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void shouldAnswerWithTrue()
+    public void main()
     {
-        assertTrue( true );
+        WebDriver driver;
+        String baseUrl = "https://kasirdemo.belajarqa.com";
+
+        WebDriverManager.chromedriver().setup();
+
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get(baseUrl);
+        
+
+
+
+        // driver.quit();
+
     }
 }
